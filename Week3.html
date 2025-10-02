@@ -11,34 +11,22 @@
   <button onclick="calcArea()">Calculate Area</button>
   <button onclick="calcPerimeter()">Calculate Perimeter</button>
   <p id="rectResult"></p>
-
-  <hr>
-
   <h2>Average Calculator</h2>
-  <label>Number 1: <input id="num1" type="number"></label><br><br>
+  <label>Nuber 1: <input id="num1" type="number"></label><br><br>
   <label>Number 2: <input id="num2" type="number"></label><br><br>
   <label>Number 3: <input id="num3" type="number"></label><br><br>
   <button onclick="calcAverage()">Calculate Average</button>
   <p id="avgResult"></p>
-
-  <hr>
-
   <h2>BMI Calculator</h2>
   <label>Weight (kg): <input id="weight" type="number"></label><br><br>
   <label>Height (m): <input id="heightBMI" type="number" step="0.01"></label><br><br>
   <button onclick="calcBMI()">Calculate BMI</button>
   <p id="bmiResult"></p>
-
-  <hr>
-
   <h2>Total Minutes Calculator</h2>
   <label>Hours: <input id="hours" type="number"></label><br><br>
   <label>Minutes: <input id="minutes" type="number"></label><br><br>
   <button onclick="calcTotalMinutes()">Calculate Total Minutes</button>
   <p id="timeResult"></p>
-
-  <hr>
-
   <h2>Find Max Value</h2>
   <label>Numbers (separated by commas): <input id="maxNumbers" type="text" placeholder="e.g. 3,7,2,9"></label><br><br>
   <button onclick="findMax()">Find Max</button>
@@ -59,42 +47,37 @@
       document.getElementById("rectResult").textContent = "Perimeter = " + (2 * (h + w));
     }
 
-    // Average of 3 numbers
     function calcAverage() {
-      let a = Number(document.getElementById("num1").value);
-      let b = Number(document.getElementById("num2").value);
-      let c = Number(document.getElementById("num3").value);
-      let avg = (a + b + c) / 3;
-      document.getElementById("avgResult").textContent = "Average = " + avg;
-    }
-
-    // BMI
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    let c = Number(document.getElementById("num3").value);
+    let avg = (a + b + c) / 3;
+    document.getElementById("avgResult").textContent = "Average = " + avg;
+}
     function calcBMI() {
-      let weight = Number(document.getElementById("weight").value);
-      let height = Number(document.getElementById("heightBMI").value);
-      if (height <= 0) {
-        document.getElementById("bmiResult").textContent = "Height must be > 0";
-        return;
-      }
-      let bmi = weight / (height * height);
-      document.getElementById("bmiResult").textContent = "BMI = " + bmi.toFixed(2);
+    let weight = Number(document.getElementById("weight").value);
+    let height = Number(document.getElementById("heightBMI").value);
+    if (height <= 0) {
+      document.getElementById("bmiResult").textContent = "Height must be > 0";
+      return;
     }
-
-    // Total minutes
+    let bmi = weight / (height * height);
+    document.getElementById("bmiResult").textContent = "BMI = " + bmi.toFixed(2);
+  }
     function calcTotalMinutes() {
-      let h = Number(document.getElementById("hours").value);
-      let m = Number(document.getElementById("minutes").value);
-      let total = h * 60 + m;
-      document.getElementById("timeResult").textContent = "Total minutes = " + total;
-    }
-
-    // Find max value
+    let h = Number(document.getElementById("hours").value);
+    let m = Number(document.getElementById("minutes").value);
+    let total = h * 60 + m;
+    document.getElementById("timeResult").textContent = "Total minutes = " + total;
+}
     function findMax() {
-      let input = document.getElementById("maxNumbers").value;
-      let numbers = input.split(",").map(x => Number(x.trim()));
-      let maxVal = Math.max(...numbers);
-      document.getElementById("maxResult").textContent = "Max value = " + maxVal;
-    }
+    let input = document.getElementById("maxNumbers").value;
+    let numbers = input.split(",").map(x => Number(x.trim()));
+    let maxVal = Math.max(...numbers);
+    document.getElementById("maxResult").textContent = "Max value = " + maxVal;
+}
+
+
   </script>
 </body>
 </html>
