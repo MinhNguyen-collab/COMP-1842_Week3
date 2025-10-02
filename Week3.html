@@ -55,14 +55,14 @@
     document.getElementById("avgResult").textContent = "Average = " + avg;
 }
     function calcBMI() {
-    let weight = umber(document.getElementById("weight").value);
+    let weight = Number(document.getElementById("weight").value);
     let height = Number(document.getElementById("heightBMI").value);
     if (height <= 0) {
       document.getElementById("bmiResult").textContent = "Height must be > 0";
       return;
     }
     let bmi = weight / (height * height);
-    document.getElementById("bmiResult").textContent = "BMI = " + bmi.toFixed(2);
+    document.getElementById("bmiResult").textontent = "BMI = " + bmi.toFixed(2);
   }
     function calcTotalMinutes() {
     let h = Number(document.getElementById("hours").value);
