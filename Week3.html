@@ -12,7 +12,7 @@
   <button onclick="calcPerimeter()">Calculate Perimeter</button>
   <p id="rectResult"></p>
   <h2>Average Calculator</h2>
-  <label>Nuber 1: <input id="num1" type="number"></label><br><br>
+  <label>Number 1: <input id="num1" type="number"></label><br><br>
   <label>Number 2: <input id="num2" type="number"></label><br><br>
   <label>Number 3: <input id="num3" type="number"></label><br><br>
   <button onclick="calcAverage()">Calculate Average</button>
@@ -55,7 +55,7 @@
     document.getElementById("avgResult").textContent = "Average = " + avg;
 }
     function calcBMI() {
-    let weight = Number(document.getElementById("weight").value);
+    let weight = umber(document.getElementById("weight").value);
     let height = Number(document.getElementById("heightBMI").value);
     if (height <= 0) {
       document.getElementById("bmiResult").textContent = "Height must be > 0";
