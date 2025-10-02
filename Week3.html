@@ -62,7 +62,7 @@
       return;
     }
     let bmi = weight / (height * height);
-    document.getElementById("bmiResult").textontent = "BMI = " + bmi.toFixed(2);
+    document.getElementById("bmiResult").textContent = "BMI = " + bmi.toFixed(2);
   }
     function calcTotalMinutes() {
     let h = Number(document.getElementById("hours").value);
@@ -71,7 +71,7 @@
     document.getElementById("timeResult").textContent = "Total minutes = " + total;
 }
     function findMax() {
-    let input = document.getElementById("maxNumbers").value;
+    let input = document.getEleentById("maxNumbers").value;
     let numbers = input.split(",").map(x => Number(x.trim()));
     let maxVal = Math.max(...numbers);
     document.getElementById("maxResult").textContent = "Max value = " + maxVal;
